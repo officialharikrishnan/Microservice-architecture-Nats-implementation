@@ -36,14 +36,12 @@ const nats = new NatsConnect()
 nats.subscribe("products")
 nats.subscribe("create:order")
 
-app.get("/",(req,res)=>{
-    
-})
 function makePayment(data:any){
     data.payment='Order Confirmed'
-    nats.publish("order:status",data)
+    const response={data,status:true}
+    nats.publish("order:status",response)
     
-}
+} 
 
 app.listen(port,()=>{
     console.log("payment server running");
