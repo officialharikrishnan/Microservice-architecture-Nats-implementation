@@ -74,7 +74,7 @@ class NatsConnect {
 const nats = new NatsConnect()
 
 app.post('/create-order',async (req, res) => {
-   nats.publish("get:product","64121a51628d1642a37e878d")
+   nats.publish("get:product","64128e431c84c22ee8de4732")
    await nats.subscribe("getproduct:result").then((data)=>{
        createOrder(data)
        nats.publish("create:order", data)

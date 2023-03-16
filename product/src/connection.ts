@@ -1,6 +1,6 @@
 import mongoose from 'mongoose';
 
-const connectionString = 'mongodb://localhost:27017/Microservice';
+const connectionString = 'mongodb://localhost:27017/Microservice-products';
 
 mongoose.connect(connectionString);
 

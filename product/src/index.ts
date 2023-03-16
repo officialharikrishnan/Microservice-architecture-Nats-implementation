@@ -69,7 +69,6 @@ nats.subscribe("get:product").then((data)=>{
 })
 
 app.listen(port, () => {
-    console.log("order server running"); 
+    console.log("product server running"); 
 
 })
-
